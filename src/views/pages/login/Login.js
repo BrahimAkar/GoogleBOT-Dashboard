@@ -4,13 +4,11 @@ import app from "./../../../base";
 import { AuthContext } from "./../../../Auth";
 import { Form, Button } from "react-bootstrap";
 import {
-
   CCard,
   CCardBody,
   CCardGroup,
   CCol,
   CContainer,
- 
   CRow,
 } from "@coreui/react";
 const Login = ({ history }) => {
@@ -44,7 +42,17 @@ const Login = ({ history }) => {
             <CCardGroup>
               <CCard className="p-4">
                 <CCardBody>
-                  <h1 className="text-center">LOGIN</h1>
+                  <h1 className="text-center">
+                    {" "}
+                    <img
+                      src="https://youpel.ma/layouts/v7/resources/Images/vtiger.png"
+                      height={65}
+                      className="text-center"
+                      alt=""
+                    ></img>
+                  </h1>
+
+                  {/* <h1 className="text-center">LOGIN</h1> */}
                   <br></br>
                   <Form onSubmit={handleLogin}>
                     <Form.Group controlId="formBasicEmail">
