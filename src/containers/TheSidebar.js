@@ -28,8 +28,8 @@ const TheSidebar = () => {
     >
       <CSidebarBrand className="d-md-down-none" to="/">
         <img
-          src="https://cdn.icon-icons.com/icons2/1488/PNG/512/5347-github_102542.png"
-          height={65}
+          src="https://youpel.ma/layouts/v7/resources/Images/vtiger.png"
+          height={45}
           alt=""
         ></img>
         {/* <CIcon
