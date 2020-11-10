@@ -14,7 +14,7 @@ function ScrapWithIp() {
   const [response, setResponse] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://www.atlageek.com/api/bandwidth");
+      const result = await axios("http://157.245.86.92:2629/api/bandwidth");
       console.log("resuuuuuuuuuuult is : ", result);
       setData(result.data.data);
       setResponse(true);
@@ -40,7 +40,7 @@ function ScrapWithIp() {
     console.log(toSend);
 
     axios
-      .post("https://www.atlageek.com/api/runpremiumproxyscrap", toSend)
+      .post("http://157.245.86.92:2629/api/runpremiumproxyscrap", toSend)
       // .post("http://localhost:2626/api/runpremiumproxyscrap", toSend)
       .then((res) => {
         notifySuccess();

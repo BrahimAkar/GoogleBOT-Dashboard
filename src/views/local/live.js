@@ -20,7 +20,7 @@ class Live extends Component {
       endpoint5: "https://aut5.herokuapp.com",
       endpoint6: "https://aut6.herokuapp.com",
       endpoint1: "http://localhost:2626",
-      // endpoint1: "https://www.atlageek.com",
+      // endpoint1: "http://157.245.86.92:2629",
       // alijilali58@gmail.com
     };
   }
