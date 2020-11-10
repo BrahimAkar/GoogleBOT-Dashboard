@@ -1,0 +1,28 @@
+   <CRow>
+          <CCol xs="12" lg="12">
+            <CCard>
+              {/* <CCardHeader>Errors Logs</CCardHeader> */}
+              <CCardBody>
+                <LoadingIndicator />
+                <CDataTable
+                  items={listErros}
+                  fields={fields}
+                  itemsPerPage={10}
+                  //    theadTopSlot={wdg}
+                  pagination
+                  sorter={true}
+                  hover={true}
+                  scopedSlots={{
+                    Status: (item) => (
+                      <td>
+                        <CBadge color={getBadge(item.Status)}>
+                          {item.Status}
+                        </CBadge>
+                      </td>
+                    ),
+                  }}
+                />
+              </CCardBody>
+            </CCard>
+          </CCol>
+        </CRow>
