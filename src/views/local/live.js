@@ -160,7 +160,7 @@ class Live extends Component {
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 6 UP 👨‍💻{" "}
+                        Server 6 DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
@@ -177,7 +177,7 @@ class Live extends Component {
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 7 UP 👨‍💻{" "}
+                        Server 7 DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
