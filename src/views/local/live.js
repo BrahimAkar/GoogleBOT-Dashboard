@@ -20,7 +20,6 @@ class Live extends Component {
       endpoint5: "https://aut5.herokuapp.com",
       endpoint6: "https://aut6.herokuapp.com",
       endpoint1: "https://keyshunt.com",
-      // alijilali58@gmail.com
     };
   }
   componentDidMount() {
@@ -80,14 +79,14 @@ class Live extends Component {
             <div class="col-sm-12 col-lg-6 py-2 ">
               <div class="card h-100 border-primary">
                 <div class="card-body">
-                  <h2 class="card-title mb-5">🟢 Server 2</h2>
+                  <h2 class="card-title mb-5">🔴 Server 2</h2>
                   <p class="card-text">
                     {response ? (
                       <h4>{response}</h4>
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 2 is UP 👨‍💻{" "}
+                        Server 2 is DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
@@ -98,7 +97,7 @@ class Live extends Component {
               <div class="card h-100 border-primary">
                 <div class="card-body">
                   <h2 class="card-title mb-5" style={{ textAlign: "center" }}>
-                    🟢 Server 3
+                    🔴 Server 3
                   </h2>
                   <p class="card-text">
                     {response2 ? (
@@ -106,7 +105,7 @@ class Live extends Component {
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 3 is UP 👨‍💻{" "}
+                        Server 3 is DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
@@ -118,14 +117,14 @@ class Live extends Component {
             <div class="col-sm-12 col-lg-6 py-2 ">
               <div class="card h-100 border-primary">
                 <div class="card-body">
-                  <h2 class="card-title mb-5">🟢 Server 4</h2>
+                  <h2 class="card-title mb-5">🔴 Server 4</h2>
                   <p class="card-text">
                     {response3 ? (
                       <h4>{response3}</h4>
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 4 is UP 👨‍💻{" "}
+                        Server 4 is DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
@@ -135,14 +134,14 @@ class Live extends Component {
             <div class="col-sm-12 col-lg-6 py-2 ">
               <div class="card h-100 border-primary">
                 <div class="card-body">
-                  <h2 class="card-title mb-5">🟢 Server 5</h2>
+                  <h2 class="card-title mb-5">🔴 Server 5</h2>
                   <p class="card-text">
                     {response4 ? (
                       <h4>{response4}</h4>
                     ) : (
                       <span role="img" aria-label="">
                         {" "}
-                        Server 5 is UP 👨‍💻{" "}
+                        Server 5 is DOWN 👨‍💻{" "}
                       </span>
                     )}
                   </p>
@@ -154,7 +153,7 @@ class Live extends Component {
             <div class="col-sm-12 col-lg-6 py-2 ">
               <div class="card h-100 border-primary">
                 <div class="card-body">
-                  <h2 class="card-title mb-5">🟢 Server 6</h2>
+                  <h2 class="card-title mb-5">🔴 Server 6</h2>
                   <p class="card-text">
                     {response5 ? (
                       <h4>{response5}</h4>
@@ -171,7 +170,7 @@ class Live extends Component {
             <div class="col-sm-12 col-lg-6 py-2 ">
               <div class="card h-100 border-primary">
                 <div class="card-body">
-                  <h2 class="card-title mb-5">🟢 Server 7</h2>
+                  <h2 class="card-title mb-5">🔴 Server 7</h2>
                   <p class="card-text">
                     {response6 ? (
                       <h4>{response6}</h4>
