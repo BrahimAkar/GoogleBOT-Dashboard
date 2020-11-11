@@ -19,7 +19,7 @@ class Live extends Component {
       endpoint4: "https://aut44.herokuapp.com",
       endpoint5: "https://aut5.herokuapp.com",
       endpoint6: "https://aut6.herokuapp.com",
-      endpoint1: "http://localhost:2626",
+      endpoint1: "http://localhost:2629",
       // endpoint1: "https://keyshunt.com",
       // alijilali58@gmail.com
     };
