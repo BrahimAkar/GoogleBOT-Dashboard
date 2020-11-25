@@ -37,7 +37,7 @@ function Dashboard() {
           console.log(response.data);
         })
         .catch((error) => console.log(error));
-    }, 2000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
