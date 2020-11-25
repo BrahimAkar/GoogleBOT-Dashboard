@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import axios from "axios";
 import { useForm } from "react-hook-form";
 import { Button, Form, Container, Col, Row } from "react-bootstrap";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 function ScrapWithIp() {
+  const history = useHistory();
+  const navigateTo = () => history.push("/live"); //eg.history.push('/login');
+
   const { register, handleSubmit, errors } = useForm();
   const [data, setData] = useState({ hits: [] });
   const [lang, setlang] = useState("Select language");
@@ -23,27 +28,32 @@ function ScrapWithIp() {
     fetchData();
   }, []);
   const onSubmit = (data) => {
-    let keyword = data.keyword;
+    let keywordtofocus = data.keyword;
     let website = data.website;
     let numproxies = data.numproxies;
     let lang = data.country;
     let platform = data.platform;
     let google = data.google;
+
+    console.log(website);
+    let websitesArray = website.split("\n");
+    console.log(websitesArray);
+
     const toSend = {
-      keyword,
-      website,
-      numproxies,
-      lang,
+      keywordtofocus,
+      websites: websitesArray,
+      clickforeachwebsite: numproxies,
+      proxycountry: lang,
       platform,
-      google,
+      googlecountry: google,
     };
-    console.log(toSend);
 
     axios
-      .post("https://keyshunt.com/api/runpremiumproxyscrap", toSend)
+      .post("http://localhost:2629/api/runpremiumproxyscrap", toSend)
       // .post("http://localhost:2626/api/runpremiumproxyscrap", toSend)
       .then((res) => {
         notifySuccess();
+        //  navigateTo();
       })
 
       .catch((err) => {
@@ -105,6 +115,16 @@ function ScrapWithIp() {
     setGoogle(e);
   };
 
+  const validateWebsites = (e) => {
+    const Myarray = e.split("\n");
+
+    if (Myarray.length < 1) {
+      alert("Please type something");
+      return false;
+    }
+    return true;
+  };
+
   return (
     <>
       <ToastContainer
@@ -153,19 +173,20 @@ function ScrapWithIp() {
             <Row>
               <Col md="3">
                 {" "}
-                <Form.Label htmlFor="website">Website</Form.Label>
+                <Form.Label htmlFor="website">Websites</Form.Label>
               </Col>
               <Col>
                 {" "}
                 <Form.Control
-                  ref={register({ required: true })}
+                  ref={register({ required: true, validate: validateWebsites })}
+                  as="textarea"
                   name="website"
                   id="website"
                   placeholder="Enter website"
                 />
                 {errors.website && (
                   <p style={{ color: "red", marginTop: "4px" }}>
-                    Website is Required
+                    At least, one website is required!
                   </p>
                 )}
               </Col>

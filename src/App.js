@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 import "./scss/style.scss";
 
-
 import { AuthProvider } from "./Auth";
 import PrivateRoute from "./PrivateRoute";
 const loading = (
@@ -77,11 +76,7 @@ class App extends Component {
                 path="/scrapwithpremium"
                 component={TheLayout}
               />
-              <PrivateRoute
-                exact
-                path="/live"
-                component={TheLayout}
-              />
+              <PrivateRoute exact path="/live" component={TheLayout} />
               <PrivateRoute
                 exact
                 path="/scrapwithfreeproxies"
