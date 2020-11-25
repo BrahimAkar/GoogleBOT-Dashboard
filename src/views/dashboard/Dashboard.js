@@ -17,7 +17,7 @@ function Dashboard() {
   const [usersData, setusersData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:2629/api/alltasks`, {
+    fetch(`https://keyshunt.com/api/alltasks`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -28,7 +28,7 @@ function Dashboard() {
       .catch((error) => console.log(error));
 
     const interval = setInterval(() => {
-      fetch(`http://localhost:2629/api/alltasks`, {
+      fetch(`https://keyshunt.com/api/alltasks`, {
         method: "GET",
       })
         .then((res) => res.json())
