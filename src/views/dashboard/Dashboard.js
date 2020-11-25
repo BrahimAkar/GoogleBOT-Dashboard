@@ -242,8 +242,8 @@ function Dashboard() {
       key: "clickForEachWebsite",
       _style: { width: "5%" },
     },
-    { label: "+", key: "SuccessfulClicksCount", _style: { width: "5%" } },
-    { key: "SuccessfulClicks" },
+    { label: "+", key: "SuccessfulClicksCount", _style: { width: "5%" } },  
+    
     { label: "-", key: "FailedClicksCount", _style: { width: "5%" } },
 
     { label: "Lauched at", key: "dateLaunched", _style: { width: "20%" } },

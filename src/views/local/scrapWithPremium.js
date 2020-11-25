@@ -236,6 +236,7 @@ function ScrapWithIp() {
                   <option selected="selected" value="Select a country">
                     Select a country
                   </option>
+                  <option value="Belgium">Belgium</option>
                   <option value="Germany">Germany</option>
                   <option value="Spain">Spain</option>
                   <option value="France">France</option>
@@ -279,6 +280,7 @@ function ScrapWithIp() {
                   </option>
                   <option value="com">Google.com [International]</option>
                   <option value="de">Google.de [Germany]</option>
+                  <option value="be">Google.de [Belgium]</option>
                   <option value="es">Google.es [Spain]</option>
                   <option value="fr">Google.fr [France]</option>
                   <option value="nl">Google.nl [Netherland]</option>
