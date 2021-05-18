@@ -319,69 +319,7 @@ function ScrapWithIp() {
           padding: "25px",
         }}
       >
-        <Form>
-          <Form.Group>
-            <h5 class="card-title">Bandwidth infos</h5>
-            <div class="dropdown-divider mb-3"></div>
-
-            <Row>
-              <Col md="3">
-                <Form.Label htmlFor="keyword">Bandwidth Limit</Form.Label>
-              </Col>
-              <Col>
-                {response ? (
-                  <Form.Label htmlFor="bandwidthlimit">
-                    {data.bandwidthLimit}
-                  </Form.Label>
-                ) : (
-                  <p>Loading ...</p>
-                )}
-              </Col>
-            </Row>
-            <Row>
-              <Col md="3">
-                <Form.Label htmlFor="keyword">Bandwidth Usage</Form.Label>
-              </Col>
-              <Col>
-                {response ? (
-                  <Form.Label htmlFor="bandwidthusage">
-                    {data.bandwidthUsage}
-                  </Form.Label>
-                ) : (
-                  <p>Loading ...</p>
-                )}
-              </Col>
-            </Row>
-            <Row>
-              <Col md="3">
-                <Form.Label htmlFor="keyword">Activate On</Form.Label>
-              </Col>
-              <Col>
-                {response ? (
-                  <Form.Label htmlFor="activateon">
-                    {data.activateOn}
-                  </Form.Label>
-                ) : (
-                  <p>Loading ...</p>
-                )}
-              </Col>
-            </Row>
-            <Row>
-              <Col md="3">
-                <Form.Label htmlFor="keyword">Status</Form.Label>
-              </Col>
-              <Col>
-                {response ? (
-                  <Form.Label style={{ color: "green" }} htmlFor="status">
-                    {data.status} 🟢
-                  </Form.Label>
-                ) : (
-                  <p>Loading ...</p>
-                )}
-              </Col>
-            </Row>
-          </Form.Group>
-        </Form>
+      
       </Container>
     </>
   );
