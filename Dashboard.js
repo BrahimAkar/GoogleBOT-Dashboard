@@ -43,8 +43,8 @@ class Dashboard extends React.Component {
   }
 
   componentDidMount() {
-    const targetUrl = "https://keyshunt.com/api/getokresults";
-    // const targetUrl = "https://www.keyshunt.com/api/getokresults";
+    const targetUrl = "https://tikread.com/api/getokresults";
+    // const targetUrl = "https://www.tikread.com/api/getokresults";
     trackPromise(
       fetch(targetUrl)
         .then((response) => response.json())
@@ -58,8 +58,8 @@ class Dashboard extends React.Component {
 
     // get all erros:
     // var proxyUrl2 = "https://cors-anywhere.herokuapp.com/",
-    const targetUrl2 = "https://keyshunt.com/api/getbadresults";
-    // const targetUrl2 = "https://www.keyshunt.com/api/getbadresults";
+    const targetUrl2 = "https://tikread.com/api/getbadresults";
+    // const targetUrl2 = "https://www.tikread.com/api/getbadresults";
     trackPromise(
       fetch(targetUrl2)
         .then((response) => response.json())
@@ -74,8 +74,8 @@ class Dashboard extends React.Component {
 
   render() {
     const refreshWithNewSuccessData = () => {
-      const targetUrl = "https://keyshunt.com/api/getokresults";
-      // const targetUrl = "https://www.keyshunt.com/api/getokresults";
+      const targetUrl = "https://tikread.com/api/getokresults";
+      // const targetUrl = "https://www.tikread.com/api/getokresults";
       trackPromise(
         fetch(targetUrl)
           .then((response) => response.json())
@@ -90,8 +90,8 @@ class Dashboard extends React.Component {
     const refreshWithNewErrorData = () => {
       const targetUrl2 =
         // "https://stark-waters-08877.herokuapp.com/api/getbadresults";
-        // "https://www.keyshunt.com/api/getbadresults";
-        "https://keyshunt.com/api/getbadresults";
+        // "https://www.tikread.com/api/getbadresults";
+        "https://tikread.com/api/getbadresults";
       trackPromise(
         fetch(targetUrl2)
           .then((response) => response.json())
@@ -105,8 +105,8 @@ class Dashboard extends React.Component {
     };
     const deleteAllSucess = () => {
       axios
-        .delete("https://keyshunt.com/api/deleteokresults")
-        // .delete("https://www.keyshunt.com/api/deleteokresults")
+        .delete("https://tikread.com/api/deleteokresults")
+        // .delete("https://www.tikread.com/api/deleteokresults")
         // .post("http://localhost:2626/api/runpremiumproxyscrap", toSend)
         .then((res) => {
           refreshWithNewSuccessData();
@@ -118,8 +118,8 @@ class Dashboard extends React.Component {
     };
     const deleteAllErrors = () => {
       axios
-        .delete("https://keyshunt.com/api/deletebadresults")
-        // .delete("https://www.keyshunt.com/api/deletebadresults")
+        .delete("https://tikread.com/api/deletebadresults")
+        // .delete("https://www.tikread.com/api/deletebadresults")
         // .post("http://localhost:2626/api/runpremiumproxyscrap", toSend)
         .then((res) => {
           refreshWithNewErrorData();

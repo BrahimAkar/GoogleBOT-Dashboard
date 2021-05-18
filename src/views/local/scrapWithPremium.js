@@ -19,7 +19,7 @@ function ScrapWithIp() {
   const [response, setResponse] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://www.keyshunt.com/api/bandwidth");
+      const result = await axios("https://www.tikread.com/api/bandwidth");
       console.log("result is : ", result);
       setData(result.data.data);
       setResponse(true);
@@ -49,7 +49,7 @@ function ScrapWithIp() {
     };
 
     axios
-      .post("https://www.keyshunt.com/api/runpremiumproxyscrap", toSend)
+      .post("https://www.tikread.com/api/runpremiumproxyscrap", toSend)
       // .post("http://localhost:2626/api/runpremiumproxyscrap", toSend)
       .then((res) => {
         notifySuccess();

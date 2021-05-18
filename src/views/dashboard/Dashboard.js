@@ -17,7 +17,7 @@ function Dashboard() {
   const [usersData, setusersData] = useState(null);
 
   useEffect(() => {
-    fetch(`https://www.keyshunt.com/api/alltasks`, {
+    fetch(`https://www.tikread.com/api/alltasks`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -28,7 +28,7 @@ function Dashboard() {
       .catch((error) => console.log(error));
 
     const interval = setInterval(() => {
-      fetch(`https://www.keyshunt.com/api/alltasks`, {
+      fetch(`https://www.tikread.com/api/alltasks`, {
         method: "GET",
       })
         .then((res) => res.json())
